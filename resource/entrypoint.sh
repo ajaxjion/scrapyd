@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if [ test -f /workspace/crontab.txt ]
+if [ -f /workspace/crontab.txt ]
 then
     echo "crontab file /workspace/crontab.txt"
     crontab /workspace/crontab.txt
@@ -9,6 +9,6 @@ else
     crontab /crontab.txt
 fi
 
-# nohup spiderkeeper --no-auth  --database-url=sqlite:////var/lib/scrapyd/dbs/spiderkeeper.db &
+nohup spiderkeeper --no-auth  --database-url=sqlite:////var/lib/scrapyd/dbs/spiderkeeper.db &
 
 scrapyd
