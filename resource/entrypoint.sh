@@ -1,5 +1,7 @@
 #!/bin/sh
 
+/etc/init.d/cron start
+
 if [ -f /workspace/crontab.txt ]
 then
     echo "crontab file /workspace/crontab.txt"
@@ -11,4 +13,5 @@ fi
 
 nohup spiderkeeper --no-auth  --database-url=sqlite:////var/lib/scrapyd/dbs/spiderkeeper.db &
 
-scrapyd
+
+scrapyd --pidfile=
