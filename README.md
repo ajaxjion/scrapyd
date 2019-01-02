@@ -1,0 +1,7 @@
+# scrapyd
+
+* spiderkeeper
+
+* scrapy
+
+* cron
